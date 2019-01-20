@@ -1,0 +1,23 @@
+ <div>
+    <mat-table [dataSource]= "dataSource"  matSort>
+      <ng-container matColumnDef="SeqId">
+          <mat-header-cell *matHeaderCellDef >SeqId </mat-header-cell>
+          <mat-cell *matCellDef="let defect">{{defect.SeqId}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="App">
+          <mat-header-cell *matHeaderCellDef >App </mat-header-cell>
+          <mat-cell *matCellDef="let defect">{{defect.App}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Code">
+          <mat-header-cell *matHeaderCellDef >Code </mat-header-cell>
+          <mat-cell *matCellDef="let defect">{{defect.Code}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Severity">
+          <mat-header-cell *matHeaderCellDef >Severity </mat-header-cell>
+          <mat-cell *matCellDef="let defect">{{defect.Severity}}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
+      <mat-row *matRowDef="let row; columns:displayedColumns"></mat-row>
+  </mat-table>
+  </div>
