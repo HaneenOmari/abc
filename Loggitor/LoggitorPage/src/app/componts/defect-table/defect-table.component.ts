@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { MatSort, MatSortable , MatTableDataSource , MatPaginator } from '@angular/material';
 import {DefectService } from '../../Services/defect.service' ;
@@ -8,6 +8,7 @@ import {DefectService } from '../../Services/defect.service' ;
   styleUrls: ['./defect-table.component.css']
 })
 export class DefectTableComponent implements OnInit {
+  @ViewChild(MatSort) sort: MatSort;
   dataSource ;
   displayedColumns = ['SeqId', 'App', 'Code', 'Severity'];
   constructor(private defectService: DefectService  ) {}
@@ -18,6 +19,7 @@ export class DefectTableComponent implements OnInit {
         return;
       }
       this.dataSource = new MatTableDataSource(results) ;
+       this.dataSource.sort = this.sort;
     });
   }
 
