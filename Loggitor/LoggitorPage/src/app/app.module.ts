@@ -8,8 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations' ;
 import {MatTableModule, MatSortModule } from '@angular/material';
 import { DefectTableComponent } from './componts/defect-table/defect-table.component';
 import { DefectService } from './Services/defect.service';
-
-@NgModule({
+import { FormsModule } from '@angular/forms';
+ @NgModule({
   declarations: [
     AppComponent,
     DefectTableComponent
@@ -20,7 +20,8 @@ import { DefectService } from './Services/defect.service';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    FormsModule
   ],
   providers: [DefectService],
   bootstrap: [AppComponent]

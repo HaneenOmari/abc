@@ -1,23 +1,31 @@
- <div>
-    <mat-table [dataSource]= "dataSource"  matSort  >
-      <ng-container matColumnDef="SeqId">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>SeqID </mat-header-cell>
-        <mat-cell *matCellDef="let defect">{{defect.SeqID}}</mat-cell>
-    </ng-container>
-      <ng-container matColumnDef="App">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>App </mat-header-cell>
-          <mat-cell *matCellDef="let defect">{{defect.App}}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="Code">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Code </mat-header-cell>
-          <mat-cell *matCellDef="let defect">{{defect.Code}}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="Severity">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Severity </mat-header-cell>
-          <mat-cell *matCellDef="let defect">{{defect.Severity}}</mat-cell>
-      </ng-container>
+<div class="row">
+        <div class="col" align="left">
 
-      <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
-      <mat-row *matRowDef="let row; columns:displayedColumns"></mat-row>
-  </mat-table>
+        </div>
+        <div class="col-6" align="center">
+          <mat-table [dataSource]= "dataSource"  matSort  >
+              <ng-container matColumnDef="SeqId">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>SeqID </mat-header-cell>
+                <mat-cell *matCellDef="let defect">{{defect.SeqID}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="App">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>App </mat-header-cell>
+                  <mat-cell *matCellDef="let defect">{{defect.App}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="Code">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Code </mat-header-cell>
+                  <mat-cell *matCellDef="let defect">{{defect.Code}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="Severity">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Severity </mat-header-cell>
+                  <mat-cell *matCellDef="let defect">{{defect.Severity}}</mat-cell>
+              </ng-container>
+
+              <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
+              <mat-row *matRowDef="let row; columns:displayedColumns"></mat-row>
+          </mat-table>
+       </div>
+       <div class="col" align="right">
+
+       </div>
   </div>
