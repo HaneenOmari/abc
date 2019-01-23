@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { MatSort, MatSortable , MatTableDataSource , MatPaginator } from '@angular/material';
-import {DefectService } from '../../Services/defect.service' ;
+import {DefectService } from '../../Services/Defect/defect.service' ;
 @Component({
   selector: 'app-defect-table',
   templateUrl: './defect-table.component.html',
@@ -14,11 +14,13 @@ export class DefectTableComponent implements OnInit {
   constructor(private defectService: DefectService  ) {}
 
   ngOnInit() {
-    this.defectService.getDefect().subscribe(results => {
-      if (!results) {
+    this.defectService.getDefect().subscribe(results1 => {
+      if (!results1) {
         return;
       }
-      this.dataSource = new MatTableDataSource(results) ;
+      this.dataSource = new MatTableDataSource(results1) ;
+      console.log(this.dataSource);
+
        this.dataSource.sort = this.sort;
     });
   }
