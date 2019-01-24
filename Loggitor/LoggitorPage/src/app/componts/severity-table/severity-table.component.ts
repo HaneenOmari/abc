@@ -20,7 +20,7 @@ export class SeverityTableComponent implements OnInit {
       return;
     }
     this.severitydataSource = new MatTableDataSource(results) ;
-    console.log(this.severitydataSource);
+   // console.log(this.severitydataSource);
    //  this.severitydataSource.sort = this.sort;
   });
   }

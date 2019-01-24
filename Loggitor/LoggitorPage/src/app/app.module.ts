@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http' ;
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations' ;
-import {MatTableModule, MatSortModule } from '@angular/material';
+import {MatTableModule, MatSortModule, MatPaginatorModule} from '@angular/material';
 import { AppComponent } from './app.component';
 
 // Imports Of services
@@ -23,6 +23,7 @@ import { DefectTableComponent } from './componts/defect-table/defect-table.compo
     DefectTableComponent,
     ApptableComponent,
     SeverityTableComponent
+
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { DefectTableComponent } from './componts/defect-table/defect-table.compo
     BrowserAnimationsModule,
     MatTableModule,
     MatSortModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule
   ],
   providers: [
     DefectService,

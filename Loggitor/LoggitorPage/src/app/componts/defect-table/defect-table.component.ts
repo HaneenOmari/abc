@@ -9,6 +9,7 @@ import {DefectService } from '../../Services/Defect/defect.service' ;
 })
 export class DefectTableComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   dataSource ;
   displayedColumns = ['SeqId', 'App', 'Code', 'Severity'];
   constructor(private defectService: DefectService  ) {}
@@ -22,6 +23,7 @@ export class DefectTableComponent implements OnInit {
       console.log(this.dataSource);
 
        this.dataSource.sort = this.sort;
+       this.dataSource.paginator = this.paginator;
     });
   }
 
