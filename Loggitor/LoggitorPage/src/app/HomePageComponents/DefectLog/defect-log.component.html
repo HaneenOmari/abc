@@ -2,12 +2,12 @@
  <div>
           <mat-table [dataSource]= "dataSource"  matSort  >
               <ng-container matColumnDef="SeqId">
-                <mat-header-cell *matHeaderCellDef mat-sort-header>SeqID </mat-header-cell>
-                <mat-cell *matCellDef="let defect"> </mat-cell>
+                <mat-header-cell *matHeaderCellDef  >SeqID </mat-header-cell>
+                <mat-cell *matCellDef="let defect">{{defect.seqid}}</mat-cell>
               </ng-container>
               <ng-container matColumnDef="App">
                   <mat-header-cell *matHeaderCellDef mat-sort-header>App </mat-header-cell>
-                  <mat-cell *matCellDef="let defect">{{defect.appName + defect.appType }}</mat-cell>
+                  <mat-cell *matCellDef="let defect">{{defect.appName+" "+ defect.appType }}</mat-cell>
               </ng-container>
               <ng-container matColumnDef="Code">
                   <mat-header-cell *matHeaderCellDef mat-sort-header>Code </mat-header-cell>

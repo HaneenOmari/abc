@@ -56,14 +56,3 @@ div{
     display: block;
   }
 
-
-  mat-cell {
-    color: white;
-    text-align: left;
-  }
-  mat-header-cell {
-    color: white;
-    font-size: 16px;
-    font-style: italic;
-  }
-

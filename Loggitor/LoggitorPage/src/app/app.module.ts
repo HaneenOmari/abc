@@ -13,14 +13,14 @@ import { AppService } from './Services/App/app.service';
 import { SeverityService } from './Services/Severity/severity.service';
 
 // imports of the table components
-import { ApptableComponent } from './componts/apptable/apptable.component';
-import { SeverityTableComponent } from './componts/severity-table/severity-table.component';
-import { DefectTableComponent } from './componts/defect-table/defect-table.component';
+import { ApptableComponent } from './HomePageComponents/apptable/apptable.component';
+import { SeverityTableComponent } from './HomePageComponents/severity-table/severity-table.component';
+import { DefectLogComponent } from './HomePageComponents/DefectLog/defect-log.component';
 
  @NgModule({
   declarations: [
     AppComponent,
-    DefectTableComponent,
+    DefectLogComponent,
     ApptableComponent,
     SeverityTableComponent
 
