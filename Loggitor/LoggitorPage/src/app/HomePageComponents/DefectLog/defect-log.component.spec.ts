@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DefectTableComponent } from './defect-table.component';
+import { DefectLogComponent } from './defect-log.component';
 
 describe('DefectTableComponent', () => {
-  let component: DefectTableComponent;
-  let fixture: ComponentFixture<DefectTableComponent>;
+  let component: DefectLogComponent;
+  let fixture: ComponentFixture<DefectLogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DefectTableComponent ]
+      declarations: [ DefectLogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DefectTableComponent);
+    fixture = TestBed.createComponent(DefectLogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

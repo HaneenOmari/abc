@@ -7,7 +7,8 @@ import { Defect } from '../../models/defect.model';
 })
 export class DefectService {
  // private serviceUrl = '../../assets/mockData/datademo1.JSON';
- private serviceUrl = 'https://amdocslogs.herokuapp.com/ViewDefects';
+ // private serviceUrl = 'https://amdocslogs.herokuapp.com/ViewDefects'; // Ahmad najar
+  private serviceUrl = 'https://amdocslogfiles.herokuapp.com/ViewDefects'; // mahmoud darwesh
   constructor(private http: HttpClient ) { }
   getDefect(): Observable<Defect[]> {
     return this.http.get<Defect[]>(this.serviceUrl);

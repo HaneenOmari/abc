@@ -1,5 +1,5 @@
 export interface Defect {
- // SeqID: String ;
+ seqID: String ;
  appName: String;
  appType: String;
   // App: String ;

@@ -2,12 +2,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { MatSort, MatSortable , MatTableDataSource , MatPaginator } from '@angular/material';
 import {DefectService } from '../../Services/Defect/defect.service' ;
+
 @Component({
-  selector: 'app-defect-table',
-  templateUrl: './defect-table.component.html',
-  styleUrls: ['./defect-table.component.css']
+  selector: 'app-defect-log',
+  templateUrl: './defect-log.component.html',
+  styleUrls: ['./defect-log.component.css']
 })
-export class DefectTableComponent implements OnInit {
+export class DefectLogComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   dataSource ;
