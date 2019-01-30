@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http' ;
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations' ;
 import {MatTableModule, MatSortModule, MatPaginatorModule} from '@angular/material';
 import { AppComponent } from './app.component';
-
+import { ChartsModule } from 'ng2-charts';
 // Imports Of services
 import { DefectService } from './Services/Defect/defect.service';
 import { AppService } from './Services/App/app.service';
@@ -16,14 +16,15 @@ import { SeverityService } from './Services/Severity/severity.service';
 import { ApptableComponent } from './HomePageComponents/apptable/apptable.component';
 import { SeverityTableComponent } from './HomePageComponents/severity-table/severity-table.component';
 import { DefectLogComponent } from './HomePageComponents/DefectLog/defect-log.component';
+import { PieChartComponent } from './HomePageComponents/pie-chart/pie-chart.component';
 
  @NgModule({
   declarations: [
     AppComponent,
     DefectLogComponent,
     ApptableComponent,
-    SeverityTableComponent
-
+    SeverityTableComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,8 @@ import { DefectLogComponent } from './HomePageComponents/DefectLog/defect-log.co
     MatTableModule,
     MatSortModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ChartsModule
   ],
   providers: [
     DefectService,
