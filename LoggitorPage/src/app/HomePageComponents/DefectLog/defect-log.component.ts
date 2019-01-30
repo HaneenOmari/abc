@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { MatSort, MatSortable , MatTableDataSource , MatPaginator } from '@angular/material';
 import {DefectService } from '../../Services/Defect/defect.service' ;
-
 @Component({
   selector: 'app-defect-log',
   templateUrl: './defect-log.component.html',
