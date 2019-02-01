@@ -1,5 +1,5 @@
 export interface Severity {
-   Severity: String ;
-   DefNum: String ;
-   Def: String ;
+  severity: string;
+  defnum: number;
+  percentage: string;
 }

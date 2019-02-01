@@ -14,17 +14,19 @@ import { SeverityService } from './Services/Severity/severity.service';
 
 // imports of the table components
 import { ApptableComponent } from './HomePageComponents/apptable/apptable.component';
-import { SeverityTableComponent } from './HomePageComponents/severity-table/severity-table.component';
+import { SeverityPercentTableComponent } from './HomePageComponents/severity-percent-table/severity-percent-table.component';
 import { DefectLogComponent } from './HomePageComponents/DefectLog/defect-log.component';
 import { PieChartComponent } from './HomePageComponents/pie-chart/pie-chart.component';
+import { BarChartComponent } from './HomePageComponents/bar-chart/bar-chart.component';
 
  @NgModule({
   declarations: [
     AppComponent,
     DefectLogComponent,
     ApptableComponent,
-    SeverityTableComponent,
+    SeverityPercentTableComponent,
     PieChartComponent,
+    BarChartComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,9 @@
-import { AppService } from './../../Services/App/app.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AppModel } from './../../models/apps.model';
+import { AppService } from './../../Services/App/App.service';
 import { Observable } from 'rxjs/Observable';
-import { MatSort, MatSortable , MatTableDataSource , MatPaginator } from '@angular/material';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSort, MatSortable, MatTableDataSource} from '@angular/material';
+
 @Component({
   selector: 'app-apptable',
   templateUrl: './apptable.component.html',
@@ -9,18 +11,17 @@ import { MatSort, MatSortable , MatTableDataSource , MatPaginator } from '@angul
 })
 export class ApptableComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
-  dataSource ;
-  displayedColumns = ['App', 'DefNum', 'Def'];
-
+  dataSource;
+  displayedColums = ['name', 'defnum' , 'percentage'];
   constructor(private appService: AppService) { }
 
   ngOnInit() {
-    this.appService.getApp().subscribe(results => {
+    this.appService.getAppModel().subscribe(results => {
       if (!results) {
         return;
       }
-      this.dataSource = new MatTableDataSource(results) ;
-       this.dataSource.sort = this.sort;
+      this.dataSource = new MatTableDataSource(results);
+      this.dataSource.sort = this.sort;
     });
   }
 
